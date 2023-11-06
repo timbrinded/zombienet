@@ -466,7 +466,6 @@ export class NativeClient extends Client {
 
     // start
     const log = fs.createWriteStream(this.processMap[name].logs);
-    console.log(["-c", ...this.processMap[name].cmd!]);
     const nodeProcess = spawn(this.command, [
       "-c",
       ...this.processMap[name].cmd!,
